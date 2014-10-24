@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  layout =
+  layout false
 
   def each_index
     @page = Page.where(name :'index')
