@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :user_messages
+
+  resources :services
+
   resources :posts
 
   resources :reviews

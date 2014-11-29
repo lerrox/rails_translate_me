@@ -138,7 +138,7 @@ $(document).ready(function($) {
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Map
 	/* ---------------------------------------------------------------------- */
-	var contact = {"lat":"51.51152", "lon":"-0.104198"}; //Change a map coordinate here!
+	var contact = {"lat":"55.793765", "lon":"49.14971"}; //Change a map coordinate here!
 
 	try {
 		var mapContainer = $('.map');
@@ -335,7 +335,7 @@ $(document).ready(function($) {
 
 			$.ajax({
 				type: "POST",
-				url: 'contact.php',
+				url: 'user_message',
 				dataType: 'json',
 				cache: false,
 				data: $('.contact-work-form').serialize(),

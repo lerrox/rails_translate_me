@@ -38,17 +38,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img alt="" src="images/application/logo.png"></a>
+        <a class="navbar-brand" href="#"><img alt="" src= <%= asset_path("application/logo.png") %> </a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a class="active" href="#home-section">Home</a></li>
-          <li><a href="#about-section">About</a></li>
-          <li><a href="#blog-section">Blog</a></li>
-          <li><a href="#portfolio-section">Portfolio</a></li>
-          <li><a href="#team-section">Team</a></li>
-          <li><a href="#contact-section">Contact Us</a></li>
+          <li><a class="active" href="#home-section">Главная</a></li>
+          <li><a href="#about-section">О нас</a></li>
+          <li><a href="#blog-section">Блог</a></li>
+          <li><a href="#contact-section">Контакты</a></li>
 
         </ul>
       </div>
@@ -62,19 +60,19 @@
 <div class="section">
   <div id="home-section">
     <div class="home-box">
-      <img class="background-view" alt="" src="upload/singlepage-bg.jpg">
+      <img class="background-view" alt="" src=  <%= asset_path("application/singlepage-bg.jpg") %> >
       <div class="slider-caption">
         <div class="container">
           <div class="flexslider">
             <ul class="slides">
               <li>
-                <p class="flex-caption">Convertible <span>is great</span> template</p>
+                <p class="flex-caption">МЫ <span>работаем для</span> Вас</p>
               </li>
               <li>
-                <p class="flex-caption">We are great <span>company</span></p>
+                <p class="flex-caption">Здесь <span>что-то нада написать</span></p>
               </li>
               <li>
-                <p class="flex-caption">We <span>support</span> you</p>
+                <p class="flex-caption">Здесь <span>надо еще</span> что-то написать</p>
               </li>
             </ul>
           </div>
@@ -92,8 +90,8 @@
 
     <div class="welcome-box">
       <div class="container">
-        <h1><span>About Us</span></h1>
-        <p>We’re an interactive agency specialising in lean UX and intelligent product and identity design</p>
+        <h1><span>Кратко о нас</span></h1>
+        <p>Мы - бюро переводов. Мы тра-ля-ля, у нас ого-го и мы вам сделаем таааак хорошо, шо кобздец</p>
       </div>
     </div>
 
@@ -102,39 +100,21 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-4">
-            <div class="services-post">
-              <a class="services-icon1" href="#"><i class="fa fa-cogs"></i></a>
-              <div class="services-post-content">
-                <h4>Multipurpose</h4>
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis</p>
+          <% @services.each do |service| %>
+              <div class="col-md-4">
+                <div class="services-post">
+                  <a class="services-icon1" href="#"><i class="fa <%= service.icon  %> "></i></a>
+                  <div class="services-post-content">
+                    <h4> <%= service.title  %> </h4>
+                    <p> <%= service.body %> </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="services-post">
-              <a class="services-icon2" href="#"><i class="fa fa-desktop"></i></a>
-              <div class="services-post-content">
-                <h4>Flexible Design</h4>
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="services-post">
-              <a class="services-icon3" href="#"><i class="fa fa-book"></i></a>
-              <div class="services-post-content">
-                <h4>Extended Docs</h4>
-                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis</p>
-              </div>
-            </div>
-          </div>
+          <% end %>
 
         </div>
       </div>
-      <img class="shadow-image" alt="" src="images/application/shadow.png">
+      <img class="shadow-image" alt="" src= <%= asset_path("application/shadow.png") %> >
     </div>
 
     <div class="about-box">
@@ -144,7 +124,7 @@
             <div class="about-us-text">
               <h3>Who we are</h3>
               <div class="innner-box">
-                <img alt="" src="upload/about.jpg">
+                <img alt="" src= <%= asset_path("application/about.jpg") %> >
                 <p><span>Lorem Ipsum </span> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit duis set odio sit amet nibh vulputate cursus Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas</p>
               </div>
             </div>
@@ -190,15 +170,15 @@
 </div>
 <!-- End about -->
 
-<!-- blog
-    ================================================== -->
+<!-- Blog -->
+
 <div class="section">
   <div id="blog-section">
 
     <div class="welcome-box">
       <div class="container">
-        <h1><span>Our Blog</span></h1>
-        <p>We’re an interactive agency specialising in lean UX and intelligent product and identity design</p>
+        <h1><span>Наш блог</span></h1>
+        <p>Здесь мы пишем о всякой фигне</p>
       </div>
     </div>
 
@@ -210,7 +190,7 @@
           <div class="col-md-3">
             <div class="item news-item">
               <div class="inner-item">
-                <img alt="" src="upload/photo1.jpg">
+                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo1.jpg">
                 <div class="hover-item">
                   <ul>
                     <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
@@ -228,7 +208,7 @@
           <div class="col-md-3">
             <div class="item news-item">
               <div class="inner-item">
-                <img alt="" src="upload/photo2.jpg">
+                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo2.jpg">
                 <div class="hover-item">
                   <ul>
                     <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
@@ -247,7 +227,7 @@
           <div class="col-md-3">
             <div class="item news-item">
               <div class="inner-item">
-                <img alt="" src="upload/photo3.jpg">
+                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo3.jpg">
                 <div class="hover-item">
                   <ul>
                     <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
@@ -265,83 +245,7 @@
           <div class="col-md-3">
             <div class="item news-item">
               <div class="inner-item">
-                <img alt="" src="upload/photo1.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="upload/photo1.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="upload/photo2.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
-
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="upload/photo3.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="upload/photo1.jpg">
+                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo1.jpg">
                 <div class="hover-item">
                   <ul>
                     <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
@@ -356,273 +260,13 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </div>
-<!-- End blog -->
 
-<!-- portfolio
-    ================================================== -->
-<div class="section">
-  <div id="portfolio-section">
-    <div class="welcome-box">
-      <div class="container">
-        <h1><span>Our Portfolio</span></h1>
-        <p>We’re an interactive agency specialising in lean UX and intelligent product and identity design</p>
-      </div>
-    </div>
-
-    <div class="portfolio-box with-3-col">
-      <div class="container">
-        <ul class="filter">
-          <li><a href="#" class="active" data-filter="*"><i class="fa fa-th"></i>Show All</a></li>
-          <li><a href="#" data-filter=".web-design">Web Design</a></li>
-          <li><a href="#" data-filter=".photography">Photography</a></li>
-          <li><a href="#" data-filter=".nature">Nature</a></li>
-          <li><a href="#" data-filter=".logo">Logo</a></li>
-          <li><a href="#" data-filter=".brochures">Brochures</a></li>
-          <li><a href="#" data-filter=".website">Website</a></li>
-        </ul>
-
-        <div class="portfolio-container">
-
-          <div class="work-post web-design brochures">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image1.jpg">
-              <div class="hover-box">
-                <a class="zoom video" href="http://www.youtube.com/watch?v=XSGBVzeBUbk"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Iphone Wallpaper</h5>
-              <span>smartphones</span>
-            </div>
-          </div>
-
-          <div class="work-post photography website">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image2.jpg">
-              <div class="hover-box">
-                <a class="zoom" href="upload/image2.jpg"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Green Leaf Falling Dawn</h5>
-              <span>nature</span>
-            </div>
-          </div>
-
-          <div class="work-post web-design photography">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image3.jpg">
-              <div class="hover-box">
-                <a class="zoom video" href="http://www.youtube.com/watch?v=6v2L2UGZJAM"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Beautiful Wallpaper</h5>
-              <span>wallpaper</span>
-            </div>
-          </div>
-
-          <div class="work-post nature logo">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image4.jpg">
-              <div class="hover-box">
-                <a class="zoom" href="upload/image4.jpg"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Futuristic Office Design</h5>
-              <span>furniture</span>
-            </div>
-          </div>
-
-          <div class="work-post photography brochures">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image1.jpg">
-              <div class="hover-box">
-                <a class="zoom video" href="http://www.youtube.com/watch?v=XSGBVzeBUbk"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Iphone Wallpaper</h5>
-              <span>smartphones</span>
-            </div>
-          </div>
-
-          <div class="work-post web-design brochures">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image2.jpg">
-              <div class="hover-box">
-                <a class="zoom" href="upload/image2.jpg"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Green Leaf Falling Dawn</h5>
-              <span>nature</span>
-            </div>
-          </div>
-
-          <div class="work-post photography website">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image3.jpg">
-              <div class="hover-box">
-                <a class="zoom video" href="http://www.youtube.com/watch?v=6v2L2UGZJAM"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Beautiful Wallpaper</h5>
-              <span>wallpaper</span>
-            </div>
-          </div>
-
-          <div class="work-post web-design brochures">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image4.jpg">
-              <div class="hover-box">
-                <a class="zoom" href="upload/image4.jpg"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Futuristic Office Design</h5>
-              <span>furniture</span>
-            </div>
-          </div>
-
-          <div class="work-post nature website">
-            <div class="work-post-gal">
-              <img alt="" src="upload/image1.jpg">
-              <div class="hover-box">
-                <a class="zoom video" href="http://www.youtube.com/watch?v=XSGBVzeBUbk"></a>
-                <a class="page" href="#"></a>
-              </div>
-            </div>
-            <div class="work-post-content">
-              <h5>Iphone Wallpaper</h5>
-              <span>smartphones</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End portfolio -->
-
-<!-- team
-    ================================================== -->
-<div class="section">
-  <div id="team-section">
-
-    <div class="welcome-box">
-      <div class="container">
-        <h1><span>Our Team</span></h1>
-        <p>We’re an interactive agency specialising in lean UX and intelligent product and identity design</p>
-      </div>
-    </div>
-    <!-- staff-box -->
-    <div class="staff-box vers2">
-      <div class="container">
-        <h3>Our Team</h3>
-        <div class="row">
-
-          <div class="col-md-3">
-            <div class="staff-post">
-              <div class="staff-post-content">
-                <h5>Owen Miller</h5>
-                <span>manager</span>
-              </div>
-              <div class="staff-post-gal">
-                <ul class="staf-social">
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-                <img alt="" src="upload/team1.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="staff-post">
-              <div class="staff-post-content">
-                <h5>Owen Miller</h5>
-                <span>manager</span>
-              </div>
-              <div class="staff-post-gal">
-                <ul class="staf-social">
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-                <img alt="" src="upload/team2.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="staff-post">
-              <div class="staff-post-content">
-                <h5>Owen Miller</h5>
-                <span>manager</span>
-              </div>
-              <div class="staff-post-gal">
-                <ul class="staf-social">
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-                <img alt="" src="upload/team3.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="staff-post">
-              <div class="staff-post-content">
-                <h5>Owen Miller</h5>
-                <span>manager</span>
-              </div>
-              <div class="staff-post-gal">
-                <ul class="staf-social">
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                  <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-                <img alt="" src="upload/team4.jpg">
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End team -->
+<!-- End Blog -->
 
 <!-- contact
     ================================================== -->
@@ -631,8 +275,8 @@
 
     <div class="welcome-box">
       <div class="container">
-        <h1><span>Contact Us</span></h1>
-        <p>We’re an interactive agency specialising in lean UX and intelligent product and identity design</p>
+        <h1><span>Контакты</span></h1>
+        <p>Мы бюро переводов "Геераль" специализируемся на ...</p>
       </div>
     </div>
     <!-- Map box -->
@@ -647,21 +291,21 @@
 
           <div class="col-md-3">
             <div class="contact-information">
-              <h3>Contact info</h3>
+              <h3>Контакты</h3>
               <ul class="contact-information-list">
-                <li><span><i class="fa fa-home"></i>lorem ipsum street</span></li>
-                <li><span><i class="fa fa-phone"></i>9930 1234 5679</span></li>
-                <li><a href="#"><i class="fa fa-envelope"></i>info@orbit7.com</a></li>
+                <li><span><i class="fa fa-home"></i>Казань, ТЦ "Корстон"</span></li>
+                <li><span><i class="fa fa-phone"></i>+7 919-686-22-78</span></li>
+                <li><span><i class="fa fa-phone"></i>(843)279-33-15</span></li>
+                <li><a href="#"><i class="fa fa-envelope"></i>kazangeneral@gmail.com</a></li>
               </ul>
             </div>
           </div>
 
           <div class="col-md-3">
             <div class="contact-information">
-              <h3>Working hours</h3>
-              <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit duis set odio sit amet nibh vulputate cursus </p>
-              <p class="work-time"><span>Mon - Fri</span> : 10 AM to 5 PM</p>
-              <p class="work-time"><span>Sat - Sun</span> : 10 AM to 2 PM</p>
+              <h3>Рабочие часы</h3>
+              <p>Мы будем рады видеть Вас или что то вроде этого</p>
+              <p class="work-time"><span>Пн - Суб</span> : 10-00 до 20-00</p>
             </div>
           </div>
 
@@ -687,7 +331,7 @@
               </div>
 
               <div class="msg2 message"></div>
-              <input type="submit" name="mailing-submit" class="submit_contact main-form" value="Send Message">
+              <input type="submit" name="mailing-submit" class="submit_contact main-form" value="Отослать сообщение">
 
             </form>
           </div>

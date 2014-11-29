@@ -7,22 +7,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
+  host: postgres56.1gb.ru
+  database: xgb_kazangen
   pool: 5
-  username: postgres
-  password: 666666
+  username: xgb_kazangen
+  password: ef3168f61xv
 
 development:
   <<: *default
-  database: translate_me_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: translate_me_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
