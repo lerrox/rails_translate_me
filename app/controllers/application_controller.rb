@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
   def each_index
     @page = Page.where(name :'index')
   end
+
+
+  def translation
+
+  end
 end

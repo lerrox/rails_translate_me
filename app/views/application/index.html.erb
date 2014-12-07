@@ -3,7 +3,7 @@
 
 <html lang="en" class="no-js">
 <head>
-  <title>Convertible</title>
+  <title>Генераль, Бюро переводов</title>
 
   <meta charset="utf-8">
 
@@ -19,6 +19,20 @@
   <%= stylesheet_link_tag "application/flexslider" %>
   <%= stylesheet_link_tag "application/style" %>
   <%= stylesheet_link_tag "application/responsive" %>
+
+  <style>
+      ul li{
+          list-style: square outside; /* Квадратные маркеры */
+          /* Маркеры размещаются за
+             пределами текстового блока */
+      }
+
+      p {
+          line-height: 1.25em;
+          margin: 1.25em 0;
+          text-align: justify;
+      }
+  </style>
 
 
 </head>
@@ -38,14 +52,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img alt="" src= <%= asset_path("application/logo.png") %> </a>
+        <a class="navbar-brand" href="#"><img alt="" src= <%= asset_path("application/general-logo.png") %>/> </a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
 
-          <li><a class="active" href="#home-section">Главная</a></li>
-          <li><a href="#about-section">О нас</a></li>
-          <li><a href="#blog-section">Блог</a></li>
+          <li><a class="active" href="#verbal-translation">Устные переводы</a></li>
+          <li><a href="#written-translation">Письменные переводы</a></li>
+          <li><a href="#notarial">Заверение</a></li>
           <li><a href="#contact-section">Контакты</a></li>
 
         </ul>
@@ -69,10 +83,10 @@
                 <p class="flex-caption">МЫ <span>работаем для</span> Вас</p>
               </li>
               <li>
-                <p class="flex-caption">Здесь <span>что-то нада написать</span></p>
+                <p class="flex-caption">Надежность, честность, эффективность</p>
               </li>
               <li>
-                <p class="flex-caption">Здесь <span>надо еще</span> что-то написать</p>
+                <p class="flex-caption">Наши <span>клиенты</span> - наши <span>партнеры</span></p>
               </li>
             </ul>
           </div>
@@ -91,182 +105,300 @@
     <div class="welcome-box">
       <div class="container">
         <h1><span>Кратко о нас</span></h1>
-        <p>Мы - бюро переводов. Мы тра-ля-ля, у нас ого-го и мы вам сделаем таааак хорошо, шо кобздец</p>
+        <p>Мы - бюро переводов. Мы осуществляем полный набор услуг в сфере переводов.</p>
       </div>
     </div>
 
     <!-- services-box -->
-    <div class="services-box">
-      <div class="container">
-        <div class="row">
+    <!--<div class="services-box">-->
+      <!--<div class="container">-->
+        <!--<div class="row">-->
 
-          <% @services.each do |service| %>
-              <div class="col-md-4">
-                <div class="services-post">
-                  <a class="services-icon1" href="#"><i class="fa <%= service.icon  %> "></i></a>
-                  <div class="services-post-content">
-                    <h4> <%= service.title  %> </h4>
-                    <p> <%= service.body %> </p>
-                  </div>
-                </div>
-              </div>
-          <% end %>
+          <!--<% @services.each do |service| %>-->
+              <!--<div class="col-md-4">-->
+                <!--<div class="services-post">-->
+                  <!--<a class="services-icon1" href="#"><i class="fa <%= service.icon  %> "></i></a>-->
+                  <!--<div class="services-post-content">-->
+                    <!--<h4> <%= service.title  %> </h4>-->
+                    <!--<p> <%= service.body %> </p>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+          <!--<% end %>-->
 
-        </div>
-      </div>
-      <img class="shadow-image" alt="" src= <%= asset_path("application/shadow.png") %> >
-    </div>
+        <!--</div>-->
+      <!--</div>-->
+      <!--<img class="shadow-image" alt="" src= <%= asset_path("application/shadow.png") %> >-->
+    <!--</div>-->
 
-    <div class="about-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="about-us-text">
-              <h3>Who we are</h3>
-              <div class="innner-box">
-                <img alt="" src= <%= asset_path("application/about.jpg") %> >
-                <p><span>Lorem Ipsum </span> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit duis set odio sit amet nibh vulputate cursus Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas</p>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-4">
-            <div class="skills-progress">
-              <h3>Our Skills</h3>
-              <p>WordPress Development <span>71%</span></p>
-              <div class="meter nostrips wp">
-                <span style="width: 71%"></span>
-              </div>
-              <p>Photoshop <span>85%</span></p>
-              <div class="meter nostrips photoshop">
-                <span style="width: 85%"></span>
-              </div>
-              <p>HTML5/CSS3 <span>76%</span></p>
-              <div class="meter nostrips html">
-                <span style="width: 76%"></span>
-              </div>
-              <p>Ruby on Rails <span>53%</span></p>
-              <div class="meter nostrips ruby">
-                <span style="width: 53%"></span>
-              </div>
-              <p>Social Marketing <span>69%</span></p>
-              <div class="meter nostrips marketing">
-                <span style="width: 69%"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="company-mission">
-              <h3>Company Mission</h3>
-              <span class="icon"></span>
-              <p><span>rbit7</span> gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit duis set odio sit amet nibh vulputate cursus a sit amet mauris.Morbi accumsan ipsum velit. Nam ntec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <!-- End about -->
 
-<!-- Blog -->
-
 <div class="section">
-  <div id="blog-section">
-
-    <div class="welcome-box">
+  <div  id = "verbal-translation">
+    <div class="about-box">
       <div class="container">
-        <h1><span>Наш блог</span></h1>
-        <p>Здесь мы пишем о всякой фигне</p>
-      </div>
-    </div>
-
-    <!-- blog-box Banner -->
-    <div class="blog-box with-nosidebar">
-      <div class="container">
-
         <div class="row">
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo1.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
+          <div class="col-md-7">
+            <div class="about-us-text">
+              <h3>Устный перевод</h3>
+              <div class="innner-box">
+                <img alt="" src= <%= asset_path("application/healthed_blog_welcome.jpg") %> >
+                <p>Для осуществления успешной работы с иностранными партнерами Вы можете воспользоваться нашими услугами по устному переводу. В соответствии с Вашими требованиями мы можем предоставить переводчиков, владеющих языком в нужной Вам тематике. </p>
+                  <p>Бюро переводов «Генераль» предлагает своим клиентам услуги профессионального устного перевода с иностранных языков, а также на иностранные языки. </p>
+                  <p>Если Вы хотите заказать устный перевод в нашей компании, Вы можете сделать это по телефону в Казани (843) 279-33-15, либо +7-917-928-14-25. Также Вы можете отправить запрос на услуги переводчика по электронной почте kazangeneral@gmail.com  или 6433475@mail.ru: менеджер бюро переводов «Генераль» свяжется с Вами в течение ближайшего времени и ознакомит Вас с условиями работы, а также назовет стоимость услуг перевода</p>
+                  <p>В большинстве случаев требуется <b>последовательный перевод</b>. Например, услуги устного переводчика могут потребоваться в следующих ситуациях: деловые совещания, телефонные переговоры, встречи с иностранными партнерами, семинары, выставки, презентации, сопровождение иностранных делегаций, деловые поездки, командировки.</p>
+                  <p>Услуги устного переводчика целесообразно заказывать заранее – за несколько дней до предполагаемой работы. Хотя, даже если Вы позвоните нам накануне вечером и скажете, что завтра утром Вам нужен переводчик, и в этом случае мы постараемся Вам помочь.</p>
+                  <p><b>Синхронный перевод</b> более сложный – он требует наличия у переводчика определенных навыков плюс необходимо специальное оборудование для синхронного перевода. Переводчик – синхронист может быть востребован на крупных форумах, симпозиумах, предполагающих наличие большого числа участников. Синхнонный перевод в среднем стоит в 3-4 раза дороже, чем последовательный.</p>
+                   <p>В случае, если Вам нужен Вам гид переводчик по Казани или республике Татарстан, необходимы услуги переводчика в Китае или Италии, других городах России — обращайтесь в Бюро переводов «Генераль», и мы сможем подобрать специалистов для работы в любом городе мира. </p>
               </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
 
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo2.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit </p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
+          <div class="col-md-5">
+            <div class="company-mission">
+              <h3>Стоимость услуг последовательного перевода</h3>
 
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo3.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="item news-item">
-              <div class="inner-item">
-                <img alt="" src="file:///home/lerrox/%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/convertible/convertible/images/page/photo1.jpg">
-                <div class="hover-item">
-                  <ul>
-                    <li><a class="autor" href="#"><i class="fa fa-user"></i> TrendyStuff</a></li>
-                    <li><a class="date" href="#"><i class="fa fa-clock-o"></i> 19 October, 2013</a></li>
-                    <li><a class="comment-numb" href="#"><i class="fa fa-comments"></i> 16 Comments</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h5>Killing the author quiz but no let up on the review process</h5>
-              <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit</p>
-              <a class="read-more" href="#">read more <i class="fa fa-arrow-right"></i></a>
+              <table class="table">
+                <colgroup>
+                  <col span="1" style="width: 40%;">
+                  <col span="1" style="width: 30%;">
+                  <col span="1" style="width: 30%;">
+                </colgroup>
+                <thead>
+                <tr>
+                  <th>Язык</th>
+                  <th>Цена за 1 час</th>
+                  <th>Цена за полный рабочий день*</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Английский</td>
+                  <td>700 - 800 руб.</td>
+                  <td>5000 руб.</td>
+                </tr>
+                <tr>
+                  <td>Немецкий</td>
+                  <td>700 - 800 руб.</td>
+                  <td>5000 руб.</td>
+                </tr>
+                <tr>
+                  <td>Испанский</td>
+                  <td>700 - 1000 руб.</td>
+                  <td>5500 руб.</td>
+                </tr>
+                <tr>
+                  <td>Французский</td>
+                  <td>700 - 1000 руб.</td>
+                  <td>5500 руб.</td>
+                </tr>
+                <tr>
+                  <td>Восточные языки (арабский, китайский, японский)</td>
+                  <td>1500 руб.</td>
+                  <td>7000 руб.</td>
+                </tr>
+                <tr>
+                  <td>Тюркские языки (азербайджанский, казахский, киргизский, узбекский, турецкий, туркменский, татарский, чувашский и т. д))</td>
+                  <td>600 - 900 руб.</td>
+                  <td>от 4000 руб.</td>
+                </tr>
+                <tr>
+                  <td>Другие редкие языки</td>
+                  <td>от 1500 руб.</td>
+                  <td>от 5500 руб. по договоренности</td>
+                </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+ </div>
 
+<div class="section">
+  <div  id = "written-translation">
+    <div class="about-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="about-us-text">
+              <h3>Письменный перевод</h3>
+              <div class="innner-box">
+                <img alt="" src= <%= asset_path("application/translation-pen.jpg") %> >
+                <p>Мы выполняем письменные переводы с/на иностранные языки по любой тематике, в том числе:</p>
+                  <ul>
+                    <li>
+                        <p><b>Перевод личных документов</b> (паспорта, свидетельства о рождении, дипломы, аттестаты, ПТС, свидетельства о собственности, водительские права и т.п.);</p>
+                    </li>
+                    <li>
+                        <p><b>Перевод документов общего характера</b> (переписка, справки, меню ресторанов, путеводители, тексты рекламно-информационного характера и т.п.);</p>
+                    </li>
+                    <li>
+                        <p><b>Экономический перевод</b> (научные статьи, экономические прогнозы, обзоры, консалтинг);</p>
+                    </li>
+                    <li>
+                        <p><b>Финансовый перевод</b> (инвойсы, бухгалтерские отчеты, документы, балансы, бизнес-планы);</p>
+                    </li>
+                    <li>
+                        <p><b>Юридический перевод</b> (контракты, договора, тендерные предложения, учредительные и регистрационные документы, сертификаты, судебная документация);</p>
+                    </li>
+                    <li>
+                        <p><b>Технический перевод</b> (проектная и нормативная документация, руководства по использованию, инструкции по монтажу, наладке,ремонту оборудования, каталоги оборудования и материалов):</p>
+                        <ul style="margin-left: 50px;">
+                          <li><p>электроника</p></li>
+                          <li><p>бытовая, аудио и видео техника</p></li>
+                          <li><p>автомобили и автозапчасти</p></li>
+                          <li><p>деревообработка</p></li>
+                          <li><p>машиностроение</p></li>
+                          <li><p>энергетика</p></li>
+                          <li><p>химическая промышленность</p></li>
+                          <li><p>нефтегазовая промышленность</p></li>
+                          <li><p>строительство</p></li>
+                          <li><p>компьютеры, информационные технологии</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><b>Медицинский перевод</b> (научные статьи, истории болезни, фармакология и рецептура, медицинское оборудование, биология, здоровье, спорт);</p>
+                     </li>
+                    <li>
+                        <p><b>Перевод художественных и научно-публицистических текстов </b>(литературные произведения, статьи, книги, буклеты, брошюры);</p>
+                    </li>
+                    <li><p><b>Перевод веб-сайтов. </b></p></li>
+
+                  </ul>
+                  <p><b>В отдельных случаях, </b> по желанию заказчика, мы можем сделать бесплатный тестовый перевод размером 0.5 – 1 стр. (не более 1800 знаков с пробелами). Как правило, этого достаточно, чтобы судить о качестве перевода.</p>
+                  <h3>Как сделать заказ на письменный перевод? </h3>
+                <ul>
+                  <li><p>Если документ, который Вам нужно перевести, существует в электронном виде, присылайте его по e-mail. Мы принимаем файлы в любом формате (doc, rtf, txt, xls, tif, jpg, pdf, html, ppt, и т.д.). Мы оценим объем текста в файле и сообщим Вам стоимость перевода.</p></li>
+                  <li><p>Если документ существует только в печатном виде, его можно сосканировать и прислать нам в почту, либо прислать по факсу или передать при личной встрече у нас в офисе – ТРЦ «Корстон», 1 этаж</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="company-mission">
+              <h3>Стоимость услуг письменного перевода / перевода документов</h3>
+
+              <table class="table">
+                <colgroup>
+                  <col span="1" style="width: 40%;">
+                  <col span="1" style="width: 30%;">
+                  <col span="1" style="width: 30%;">
+                </colgroup>
+                <thead>
+                <tr>
+                  <th>Язык</th>
+                  <th>С / На русский</th>
+                  <th>Нотариальное заверение</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Английский</td>
+                  <td>400 р.</td>
+                  <td>700 р.</td>
+                </tr>
+                <tr>
+                  <td>Немецкий</td>
+                  <td>400 р.</td>
+                  <td>700 р.</td>
+                </tr>
+                <tr>
+                  <td>Французский, Испанский, Итальянский</td>
+                  <td>475 р.</td>
+                  <td>900 р.</td>
+                </tr>
+                <tr>
+                  <td>Турецкий</td>
+                  <td>500 р.</td>
+                  <td>900 р.</td>
+                </tr>
+                <tr>
+                  <td>Арабский, Фарси, Иврит</td>
+                  <td>650 р.</td>
+                  <td>900 р.</td>
+                </tr>
+                <tr>
+                  <td>Китайский, Японский, Корейский, Вьетнамский, Хинди, Урду, Монгольский</td>
+                  <td>700 р.</td>
+                  <td>900 р.</td>
+                </tr>
+                <tr>
+                  <td>Азербайджанский, Армянский, Грузинский, Казахский, Киргизский, Таджикский, Туркменский, Узбекский, Украинский, Молдавский</td>
+                  <td>500 р.</td>
+                  <td>700 р.</td>
+                </tr>
+                <tr>
+                  <td>Башкирский, Марийский, Татарский, Чувашский</td>
+                  <td>350 р.</td>
+                  <td>700 р.</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- End Blog -->
+<div class="section">
+  <div  id = "notarial">
+    <div class="about-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about-us-text">
+              <h3>Нотариальное заверение перевода</h3>
+              <div class="innner-box">
+                <p><b>Нотариальный перевод </b> – это процедура оформления перевода официальных документов, оригиналы которых выполнены на иностранном языке, для их представления в российские официальные органы, или же для перевода официальных документов, выполненных на русском языке для представления в официальные органы иностранного государства. Данная процедура включает в себя заверение перевода документа у нотариуса.</p>
+                <p><b>Нотариальный перевод осуществляется в два этапа:</b></p>
+                <ul>
+                  <li>
+                    <p>перевод документа с соблюдением надлежащего оформления</p>
+                  </li>
+                  <li>
+                    <p>заверение нотариусом подлинности подписи дипломированного переводчика на документе</p>
+                  </li>
+                </ul>
+                <p><b>Обратите внимание, </b>что в соответствии с пп. 80-81 Основ законодательства РФ о нотариате при свидетельствовании подлинности подписи переводчика на документе нотариус не несёт ответственности за содержание перевода, а лишь подтверждает, что подпись на переводе сделана определённым лицом, являющимся дипломированным переводчиком в данной языковой паре.</p>
+                <p>Услуга нотариального перевода документов на сегодняшний день может понадобиться во многих случаях. Оформление пакета визовых документов для посольства, получение разрешения на вождение транспортного средства за рубежом, учеба или работа в другой стране — наиболее популярные случаи, в которых приходится иметь дело с нотариальным заверением переводов. Что же представляет собой эта услуга?</p>
+                <p>Нотариально заверенный перевод документов — один из способов легализации официальной документации для ее законного использования на территории другого государства. В штате бюро переводов «Генераль» работают опытные и квалифицированные специалисты, которые могут быстро и качественно сделать нотариально заверенный перевод с / на английский или любой другой язык.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h3>Заверение перевода печатью бюро переводов</h3>
+            <p>В некоторых случаях нотариального удостоверения перевода не требуется, а достаточно <b>заверения перевода печатью бюро переводов.</b></p>
+            <p>Переводы, выполненные в бюро переводов «Генераль»,  могут быть заверены печатью бюро переводов с удостоверяющей надписью и подписью переводчика. Наличие печати бюро переводов на переводе свидетельствует о том, что данный перевод выполнен дипломированным переводчиком, являющимся сотрудником нашего бюро переводов. В отличие от нотариального заверения, придающего документу юридический статус, <b>заверение печатью бюро переводов</b> служит исключительно гарантией качества перевода и подтверждением того, что перевод выполнен независимым третьим лицом, но не заинтересованным лицом самостоятельно.</p>
+            <p>Обращаем Ваше внимание, что печатью бюро переводов могут быть заверены только те переводы, которые были выполнены переводчиками нашего бюро.</p>
+            <p>Заверение перевода печатью бюро переводов не всегда является достаточным. В некоторых случаях Вам может понадобиться нотариальное заверение перевода.</p>
+            <p>Заверение перевода печатью бюро переводов, в основном, используются, если документ не соответствует требованиям действующего законодательства, и в связи с этим его перевод не может быть заверен нотариально, а также, как правило, является достаточным в следующих случаях:</p>
+            <ul>
+              <li><p>на получение визы в посольстве</p></li>
+              <li><p>для страховых компаний</p></li>
+              <li><p>для медицинских учреждений</p></li>
+              <li><p>для банковских учреждений (за исключением особых требований в рамках сделки)</p></li>
+              <li><p>для провоза медикаментов на борту самолета</p></li>
+              <li><p>для подтверждения командировочных расходов</p></li>
+              <li><p>при переводе экспортных деклараций</p></li>
+            </ul>
+            <p>При заверении перевода печатью бюро переводов на последней странице перевода документа размещается текст, удостоверяющий, что перевод является верным, точным и полным, и выполнен дипломированным переводчиком. Под данным текстом ставится подпись переводчика и печать бюро переводов.</p>
+            <p>Поскольку единого документа, регулирующего оформление заверения перевода печатью бюро переводов,  не существует, уточнять все нюансы оформления следует в тех учреждениях, куда Вы планируете предоставить переведенный документ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- contact
     ================================================== -->
@@ -289,7 +421,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-3">
+          <div class="col-md-6">
             <div class="contact-information">
               <h3>Контакты</h3>
               <ul class="contact-information-list">
@@ -301,41 +433,13 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-6">
             <div class="contact-information">
               <h3>Рабочие часы</h3>
               <p>Мы будем рады видеть Вас или что то вроде этого</p>
               <p class="work-time"><span>Пн - Суб</span> : 10-00 до 20-00</p>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <h3>Send us a message</h3>
-            <form id="contact-form" class="contact-work-form2">
-
-              <div class="text-input">
-                <div class="float-input">
-                  <input name="name" id="name2" type="text" placeholder="name">
-                  <span><i class="fa fa-user"></i></span>
-                </div>
-
-                <div class="float-input2">
-                  <input name="mail" id="mail2" type="text" placeholder="email">
-                  <span><i class="fa fa-envelope"></i></span>
-                </div>
-              </div>
-
-              <div class="textarea-input">
-                <textarea name="comment" id="comment2" placeholder="message"></textarea>
-                <span><i class="fa fa-comment"></i></span>
-              </div>
-
-              <div class="msg2 message"></div>
-              <input type="submit" name="mailing-submit" class="submit_contact main-form" value="Отослать сообщение">
-
-            </form>
-          </div>
-
         </div>
       </div>
     </div>
@@ -349,7 +453,7 @@
 <footer>
   <div class="footer-line">
     <div class="container">
-      <p>&#169; 2013 Convertible,  All Rights Reserved</p>
+      <p>&#169; 2013 <i>Генераль</i></p>
       <a class="go-top" href="#"></a>
     </div>
   </div>
